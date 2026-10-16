@@ -277,6 +277,15 @@ use enum_value;
 #[cfg(all(test, feature = "vhost-user-backend"))]
 mod dummy_backend;
 
+#[cfg(all(
+    test,
+    feature = "vhost-user-frontend",
+    feature = "vhost-user-backend",
+    feature = "test-utils"
+))]
+#[path = "hegel_tests.rs"]
+mod hegel_tests;
+
 #[cfg(all(test, feature = "vhost-user-frontend", feature = "vhost-user-backend"))]
 mod tests {
     use message::VhostUserSharedMsg;

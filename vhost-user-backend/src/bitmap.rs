@@ -630,3 +630,7 @@ mod tests {
         );
     }
 }
+
+#[cfg(all(test, not(miri)))]
+#[path = "bitmap_hegel_tests.rs"]
+mod hegel_tests;

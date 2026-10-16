@@ -915,3 +915,7 @@ mod tests {
         assert!(matches!(backend.recv_header(), Err(Error::Disconnected)));
     }
 }
+
+#[cfg(test)]
+#[path = "connection_hegel_tests.rs"]
+mod hegel_tests;

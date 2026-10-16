@@ -32,6 +32,7 @@ vm-memory = { workspace = true, features = ["backend-mmap", "backend-atomic", "b
 vmm-sys-util = { workspace = true }
 
 [dev-dependencies]
+hegeltest = "0.49"
 nix = { version = "0.31", features = ["fs"] }
 tempfile = "3.2.0"
 uuid = { version = "1.8.0", features = ["v4"] }
