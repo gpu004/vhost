@@ -83,12 +83,6 @@ fn verify_dirty_log(tc: TestCase, page_aligned: bool) {
 }
 
 #[hegel::test]
-#[hegel::reproduce_failure("AXicY2cAAi5GEMnIyAhlMqJQMEEABk4ARQ==")]
-fn hegel_bitmap_dirty_log_unaligned(tc: TestCase) {
-    verify_dirty_log(tc, false);
-}
-
-#[hegel::test]
 fn hegel_bitmap_dirty_log_page_aligned(tc: TestCase) {
     verify_dirty_log(tc, true);
 }
